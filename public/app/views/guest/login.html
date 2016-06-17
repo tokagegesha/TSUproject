@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form name="loginForm" role="form" autocomplete="off" novalidate
+                  data-ng-submit="login()">
+                <div class="alert alert-danger"
+                     data-ng-show="errors">
+                    <ul class="nav">
+                        <li data-ng-repeat="error in errors">{{error.message}}</li>
+                    </ul>
+                </div>
+                <div class="alert alert-success"
+                     data-ng-show="message">
+                    {{message}}
+                </div>
+                <div class="form-group" style="margin-bottom: 2px;">
+                    <input type="text" class="form-control" name="username" placeholder="მომხმარებელი"
+                           data-ng-model="credentials.username"
+                           data-ng-required="true"/>
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" placeholder="პაროლი"
+                           data-ng-model="credentials.password"
+                           data-ng-required="true"/>
+                    <i class="fa fa-lock"></i>
+                </div>
+                <button type="submit" class="btn btn-block">შესვლა</button>
+                <a href="javascript:void(0);"
+                   data-ui-sref="home"><i class="fa fa-reply"></i> მთავარ გვერდზე დაბრუნება</a>
+            </form>
+        </div>
+    </div>
+</div>

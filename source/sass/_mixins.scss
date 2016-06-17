@@ -1,0 +1,105 @@
+@mixin clearfix() {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin linear-gradient-mixed($color-map1, $color-map2, $key1: "500", $key2: "800") {
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image: -webkit-linear-gradient(top,
+          map_get($color-map1, $key1), map_get($color-map2, $key2));
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image: linear-gradient(
+                  map_get($color-map1, $key1), map_get($color-map2, $key2));
+}
+
+@mixin linear-gradient($color-map, $key1: "500", $key2: "800") {
+  @include linear-gradient-mixed($color-map, $color-map, $key1, $key2);
+}
+
+@mixin linear-gradient-red() {
+  @include linear-gradient($mcp-red);
+}
+
+@mixin linear-gradient-pink() {
+  @include linear-gradient($mcp-pink);
+}
+
+@mixin linear-gradient-purple() {
+  @include linear-gradient($mcp-purple);
+}
+
+@mixin linear-gradient-deep-purple() {
+  @include linear-gradient($mcp-deep-purple);
+}
+
+@mixin linear-gradient-indigo() {
+  @include linear-gradient($mcp-indigo);
+}
+
+@mixin linear-gradient-blue() {
+  @include linear-gradient($mcp-blue);
+}
+
+@mixin linear-gradient-light-blue() {
+  @include linear-gradient($mcp-light-blue);
+}
+
+@mixin linear-gradient-cyan() {
+  @include linear-gradient($mcp-cyan);
+}
+
+@mixin linear-gradient-teal() {
+  @include linear-gradient($mcp-teal);
+}
+
+@mixin linear-gradient-green() {
+  @include linear-gradient($mcp-green);
+}
+
+@mixin linear-gradient-light-green() {
+  @include linear-gradient($mcp-light-green);
+}
+
+@mixin linear-gradient-lime() {
+  @include linear-gradient($mcp-lime);
+}
+
+@mixin linear-gradient-yellow() {
+  @include linear-gradient($mcp-yellow);
+}
+
+@mixin linear-gradient-amber() {
+  @include linear-gradient($mcp-amber);
+}
+
+@mixin linear-gradient-orange() {
+  @include linear-gradient($mcp-orange);
+}
+
+@mixin linear-gradient-deep-orange() {
+  @include linear-gradient($mcp-deep-orange);
+}
+
+@mixin linear-gradient-brown() {
+  @include linear-gradient($mcp-brown);
+}
+
+@mixin linear-gradient-grey() {
+  @include linear-gradient($mcp-grey);
+}
+
+@mixin linear-gradient-blue-grey() {
+  @include linear-gradient($mcp-blue-grey);
+}

@@ -15,10 +15,24 @@ define([
                 controller: 'homeController'
             },
 
+            // ==================================================
+            // Guest
+            'guest': {
+                abstract: true,
+                url: '/guest',
+                template: '<div class="ui-view"></div>',
+                controller: 'guestController' // TODO: Add Guest Controller (Create)
+            },
+
             'guest.login': {
                 url: '/login',
                 templateUrl: '/app/views/guest/login.html',
                 controller: 'guest_loginController'
+            },
+            'guest.register': {
+                url: '/register',
+                templateUrl: '/app/views/guest/register.html',
+                controller: 'guest_registerController'
             },
 
             // ==================================================

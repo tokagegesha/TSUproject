@@ -60,7 +60,7 @@ define([
          * @param {Function} cb
          */
         manager.login = function (credentials, cb) {
-            requestHelper.processPOST('/api/commons/auth/login', credentials, function (err, res) {
+            requestHelper.processPOST('http://localhost:8081/api/user/add', credentials, function (err, res) {
                 if (res) {
                     _setData(res.data);
                     //if( res.data && res.data.length )

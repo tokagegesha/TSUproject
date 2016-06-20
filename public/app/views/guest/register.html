@@ -70,7 +70,7 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
                             <input type="password" class="form-control" name="confirm" id="confirm"
-                                   placeholder="Confirm your Password" data-ng-model="credentials.confirmPassword" />
+                                   placeholder="Confirm your Password" data-ng-model="credentials.confirmPassword"/>
                         </div>
                     </div>
                 </div>
@@ -101,21 +101,45 @@
                 <div class="form-group">
                     <label class="cols-sm-2 control-label">Your Gender</label>
                     <div class="cols-sm-10">
-                        <div class="input-group" >
+                        <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i>
                                 <label class="radio-inline">
-                                    <input type="radio" name="inlineRadioOptions" id="male" value="male" data-ng-model="credentials.gender"> male
+                                    <input type="radio" name="inlineRadioOptions" id="male" value="1"
+                                           data-ng-model="credentials.gender"> male
                                 </label>
                             </span>
                             <span class="input-group-addon"><i class="fa fa-female" aria-hidden="true"></i>
                                 <label class="radio-inline">
-                                    <input type="radio" name="inlineRadioOptions" id="female" value="female" data-ng-model="credentials.gender">female
+                                    <input type="radio" name="inlineRadioOptions" id="female" value="2"
+                                           data-ng-model="credentials.gender">female
                                 </label>
                             </span>
                         </div>
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label class="cols-sm-2 control-label">Your Birth Date</label>
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Date</label>
+                        <div class="col-xs-5 date">
+                            <div class="input-group input-append date" id="datePicker">
+                                <input type="text" class="form-control" name="date"/>
+                                <span class="input-group-addon add-on"><span
+                                        class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $(document).ready(function () {
+                        $('#datePicker')
+                                .datepicker({
+                                    format: 'mm/dd/yyyy'
+                                })
+                    });
+                </script>
 
                 <div class="form-group ">
                     <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>

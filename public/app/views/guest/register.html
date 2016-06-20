@@ -15,7 +15,7 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                             <input type="text" class="form-control" name="firstName" id="firstName"
-                                   placeholder="Enter your Name" data-ng-model="credentials.firstName"/>
+                                   placeholder="First Name" data-ng-model="credentials.firstName"/>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,18 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                             <input type="text" class="form-control" name="lastName" id="lastName"
-                                   placeholder="Enter your Name" data-ng-model="credentials.lastName"/>
+                                   placeholder="Last Name" data-ng-model="credentials.lastName"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pid" class="cols-sm-2 control-label">Your ID Number</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-hashtag" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="pid" id="pid"
+                                   placeholder="ID Number" data-ng-model="credentials.pid"/>
                         </div>
                     </div>
                 </div>
@@ -43,23 +54,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="username" class="cols-sm-2 control-label">Username</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="username" id="username"
-                                   placeholder="Enter your Username"/>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
                     <label for="password" class="cols-sm-2 control-label">Password</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
                             <input type="password" class="form-control" name="password" id="password"
-                                   placeholder="Enter your Password"/>
+                                   placeholder="Enter your Password" data-ng-model="credentials.password"/>
                         </div>
                     </div>
                 </div>
@@ -70,10 +70,52 @@
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
                             <input type="password" class="form-control" name="confirm" id="confirm"
-                                   placeholder="Confirm your Password"/>
+                                   placeholder="Confirm your Password" data-ng-model="credentials.confirmPassword" />
                         </div>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label for="phone" class="cols-sm-2 control-label">Your Phone Number</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="phone" id="phone"
+                                   placeholder="Enter your Phone" data-ng-model="credentials.phone"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="cols-sm-2 control-label">Your Address</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-location-arrow"
+                                                               aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="address" id="address"
+                                   placeholder="Enter your Address" data-ng-model="credentials.address"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="cols-sm-2 control-label">Your Gender</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group" >
+                            <span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i>
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="male" value="male" data-ng-model="credentials.gender"> male
+                                </label>
+                            </span>
+                            <span class="input-group-addon"><i class="fa fa-female" aria-hidden="true"></i>
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="female" value="female" data-ng-model="credentials.gender">female
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="form-group ">
                     <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>

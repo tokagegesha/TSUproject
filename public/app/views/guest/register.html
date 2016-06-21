@@ -118,28 +118,24 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label class="cols-sm-2 control-label">Your Birth Date</label>
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label">Date</label>
-                        <div class="col-xs-5 date">
-                            <div class="input-group input-append date" id="datePicker">
-                                <input type="text" class="form-control" name="date"/>
-                                <span class="input-group-addon add-on"><span
-                                        class="glyphicon glyphicon-calendar"></span></span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <p class="input-group">
+                        <input type="text" class="form-control"
+                               data-uib-datepicker-popup="dd-MM-yyyy"
+                               data-ng-model="credentials.birthDate"
+                               data-is-open="birthDatePopup.opened"
+                               data-datepicker-options="dateOptions"
+                               data-ng-required="true"
+                               data-close-text="Close"
+                               data-alt-input-formats="['M!/d!/yyyy']"/>
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-default"
+                                        data-ng-click="openBirthDate()">
+                                    <i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                              </span>
+                    </p>
                 </div>
-
-                <script>
-                    $(document).ready(function () {
-                        $('#datePicker')
-                                .datepicker({
-                                    format: 'mm/dd/yyyy'
-                                })
-                    });
-                </script>
 
                 <div class="form-group ">
                     <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>

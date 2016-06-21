@@ -1,6 +1,8 @@
 define([
     'angular',
     'angular-ui-router',
+    'angular-animate',
+    'ui-bootstrap',
     './services/index',
     './controllers/index'
 ], function (ng) {
@@ -8,6 +10,8 @@ define([
 
     return ng.module('app', [
         'ui.router',
+        'ui.bootstrap',
+        'ngAnimate',
         'app.services',
         'app.controllers'
     ]).run(function ($rootScope, $state, sessionManager) {

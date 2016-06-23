@@ -60,8 +60,9 @@ define([
          * @param {Function} cb
          */
         manager.login = function (credentials, cb) {
-            requestHelper.processPOST('http://localhost:8081/api/user/add', credentials, function (err, res) {
+            requestHelper.processPOST('http://localhost:8081/api/session/get', credentials, function (err, res) {
                 if (res) {
+                    console.log(' session response >>>>>>'+res);
                     _setData(res.data);
                     //if( res.data && res.data.length )
                     //  _setData( res.data[ 0 ] );
